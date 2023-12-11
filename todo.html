@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div>
+        <h1>To-Do-List</h1>
+    </div>
+    <div>
+        <form action="#" id="form">
+            <label for="title">To-Do Title:</label>
+            <input type="text" id="title" required>
+            <label for="des">Add Description:</label>
+            <input type="text" id="des" required>
+            <input type="submit" id="submit" value="Add">
+        </form>
+    </div>
+    <div>
+        <h3 style="color: red;">To-Do Remain</h3>
+        <ul class="item" id="rlist">
+            
+        </ul>
+    </div>
+    <div>
+        <h3 style="color: rgb(2, 220, 49);">To-Do Done</h3>
+        <ul class="item" id="dlist">
+            
+        </ul>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    <script src="todo.js"></script>
+</body>
+</html>
