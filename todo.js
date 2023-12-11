@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded',getData)
 form.addEventListener('submit',addIt);
 
 function getData(){
-    axios.get('https://crudcrud.com/api/e78e460f2e10414b85f8c54568d81d59/tododata')
+    axios.get('https://crudcrud.com/api/9ad2677f5c90423ab089492278187d96/tododata')
         .then((response) =>{
             response.data.forEach((element) => {
                 let id = element._id;
@@ -28,7 +28,7 @@ function addIt(e){
         descript : descript.value,
         completed : false
     }
-    axios.post('https://crudcrud.com/api/e78e460f2e10414b85f8c54568d81d59/tododata',userData)
+    axios.post('https://crudcrud.com/api/9ad2677f5c90423ab089492278187d96/tododata',userData)
         .then((response)=>{
             remainlist.innerHTML="";
             donelist.innerHTML="";
@@ -70,8 +70,8 @@ function displayToDo(response,id){
 }
 
 function editCompleted(id){
-    axios.put(`https://crudcrud.com/api/e78e460f2e10414b85f8c54568d81d59/tododata/${id}`,{
-        completed:true
+    axios.patch(`https://crudcrud.com/api/9ad2677f5c90423ab089492278187d96/tododata/${id}`,{
+        completed:'true'
     }).then((response)=>{
         remainlist.innerHTML="";
         donelist.innerHTML="";
@@ -82,7 +82,7 @@ function editCompleted(id){
 }
 
 function deleteItem(id){
-    axios.delete(`https://crudcrud.com/api/e78e460f2e10414b85f8c54568d81d59/tododata/${id}`,{
+    axios.delete(`https://crudcrud.com/api/9ad2677f5c90423ab089492278187d96/tododata/${id}`,{
         completed:true
     }).then((response)=>{
         remainlist.innerHTML="";
