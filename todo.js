@@ -20,8 +20,6 @@ function getData(){
 function addIt(e){
     e.preventDefault();
     
-    //Add dispaly data code
-
     let userData = {
         title : title.value ,
         descript : descript.value,
